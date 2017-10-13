@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root 'departures#index'
+
+  get 'departures/index'
+  get 'departures/departure_matrix'
+
+  get 'departures/disjointed'
+  get 'departures/disjointed_matrix'
+
+  get 'departures/timeline'
+  get 'departures/timeline_data'
 end

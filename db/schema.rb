@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171009195156) do
+ActiveRecord::Schema.define(version: 20171012212522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,4 +75,7 @@ ActiveRecord::Schema.define(version: 20171009195156) do
     t.index ["year"], name: "index_departures_on_year"
   end
 
+  add_foreign_key "departures", "airports", column: "dest", primary_key: "iata"
+  add_foreign_key "departures", "airports", column: "origin", primary_key: "iata"
+  add_foreign_key "departures", "carriers", column: "unique_carrier", primary_key: "code"
 end
