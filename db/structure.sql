@@ -114,7 +114,8 @@ CREATE TABLE airports (
     lat double precision,
     long double precision,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    lonlat geography(Point,4326)
 );
 
 
@@ -393,6 +394,13 @@ CREATE UNIQUE INDEX index_airports_on_iata ON airports USING btree (iata);
 
 
 --
+-- Name: index_airports_on_lonlat; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_airports_on_lonlat ON airports USING gist (lonlat);
+
+
+--
 -- Name: index_carriers_on_code; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -511,6 +519,9 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20171012212522'),
 ('20171016193540'),
 ('20171016204058'),
-('20171017135149');
+('20171017135149'),
+('20171019200143'),
+('20171023172325'),
+('20171023173805');
 
 
