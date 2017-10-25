@@ -10,6 +10,23 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="navbar">
+        <div class="nav1">
+          <h1>Departures</h1>
+        </div>
+        <div class="nav2">
+          <ul>
+            <li><a href="#"><%= link_to "Airports", airports_index_url %></a></li>
+            <li><a href="#"><%= link_to "Departures", departures_index_url %></a></li>
+            <li><a href="#"><%= link_to "Disjointed", departures_disjointed_url %></a></li>
+            <li><a href="#"><%= link_to "Timeline", departures_timeline_url %></a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <%= yield %>
+    </div>
   </body>
 </html>

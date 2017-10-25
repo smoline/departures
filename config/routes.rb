@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'airports/index'
-
   root 'departures#index'
 
   get 'departures/index'

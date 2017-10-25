@@ -4,9 +4,55 @@ body {
   background: #fcfcfa;
   color: #333;
   font-family: "PT Serif", serif;
-  margin: 1em auto 4em auto;
+  margin: 0 auto 4em auto;
   position: relative;
-  width: 960px;
+}
+
+header {
+  background-color: hsla(0, 0%, 0%, 0.6);
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav1 {
+  border: none;
+  color: #dedede;
+  padding-left: 2em;
+}
+
+.nav2 {
+  display: flex;
+}
+
+ul a {
+  color: white;
+  text-decoration: none;
+}
+
+header ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex: 1;
+  margin: auto;
+}
+
+header li {
+  padding-right: 2em;
+}
+
+.main {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 svg {
